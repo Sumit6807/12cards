@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="details-container">
+        <h1 id="card-title">Card Details</h1>
+        <p id="card-description">Description of the card will go here.</p>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        
+        const descriptions = {
+            1: "The Legend of Zelda is a classic action-adventure game that follows the hero Link as he battles to save the kingdom of Hyrule from the evil Ganon. Known for its open-world exploration and puzzle-solving, it remains a beloved staple in gaming history.",
+            2: "The Last of Us is a gripping action-adventure game set in a post-apocalyptic world. Players follow Joel and Ellie as they navigate through a world ravaged by a fungal infection, experiencing a rich narrative filled with emotional depth and intense combat.",
+            3: "BioShock is a first-person shooter set in the underwater city of Rapture. Players uncover the mysteries of the city while battling its genetically modified inhabitants. The game is renowned for its compelling story and atmospheric environment.",
+            4: "Resident Evil 4 is a survival horror game that revolutionized the genre with its over-the-shoulder perspective. Players take on the role of Leon S. Kennedy, who is tasked with rescuing the President's daughter from a cult in rural Spain.",
+            5: "God of War is an action-adventure game following Kratos, the former Greek god of war, as he embarks on a journey through Norse mythology. Known for its intense combat and deep storytelling, it explores themes of fatherhood and redemption.",
+            6: "Silent Hill 2 is a psychological horror game that delves into the troubled mind of James Sunderland, who travels to the eerie town of Silent Hill in search of his deceased wife. The game is praised for its disturbing atmosphere and complex narrative.",
+            7: "Street Fighter II is a legendary fighting game that introduced iconic characters and gameplay mechanics. Players can choose from a diverse roster of fighters and compete in thrilling one-on-one battles with a variety of special moves and combos.",
+            8: "Halo 3 is a first-person shooter that concludes the original Halo trilogy. Players once again assume the role of Master Chief to fight against the Covenant and the Flood in a grand interstellar battle that combines epic storytelling with fast-paced action.",
+            9: "Counter-Strike: Global Offensive is a tactical first-person shooter that pits teams of terrorists against counter-terrorists in high-stakes missions. Known for its competitive gameplay and strategic depth, it remains a staple in the esports scene.",
+            10: "Batman: Arkham Knight is an action-adventure game that concludes the Arkham series. Players control Batman as he faces off against the mysterious Arkham Knight and other iconic villains in an open-world Gotham City.",
+            11: "League of Legends is a multiplayer online battle arena (MOBA) game where players compete in teams to destroy the enemy's Nexus. Known for its deep strategy, diverse champions, and vibrant community, it has become a major force in esports.",
+            12: "Doom is a seminal first-person shooter that popularized the genre. Players battle demonic forces from Hell across various levels, armed with a variety of powerful weapons and accompanied by a heavy metal soundtrack."
+        };
+
+        const title = {
+            1: "The Legend of Zelda",
+            2: "The Last of Us",
+            3: "BioShock",
+            4: "Resident Evil 4",
+            5: "God of War",
+            6: "Silent Hill 2",
+            7: "Street Fighter II",
+            8: "Halo 3",
+            9: "Counter-Strike: Global Offensive",
+            10: "Batman: Arkham Knight",
+            11: "League of Legends",
+            12: "Doom"
+        };
+
+        document.getElementById('card-title').innerText = title[id] || 'Unknown Game';
+        document.getElementById('card-description').innerText = descriptions[id] || 'Description not available for this card.';
+    </script>
+</body>
+</html>
